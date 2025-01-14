@@ -134,11 +134,11 @@ def get_responses(conversation_id):
             # Get MarkdownContent
             markdown_content = extract_markdown_content(response.json())
             if markdown_content:
-                print("Markdown Content:", markdown_content)
+                print("Got a response!")
             else:
                 print("MarkdownContent not found.")
 
-            return response.json()
+            return markdown_content
         else:
             print("Failed to get responses:", response.status_code, response.text)
             return None
@@ -163,10 +163,8 @@ def main():
     conversation_id = start_conversation()
     if conversation_id:
         send_message(conversation_id, "what information do you have on Co-pilot studio agents?")
-        responses = get_responses(conversation_id)
-        if responses:
-            for response in responses:
-                print("Agent:", response)
+        response = get_responses(conversation_id)
+        print("Agent:", response)
 
 if __name__ == "__main__":
     main()
