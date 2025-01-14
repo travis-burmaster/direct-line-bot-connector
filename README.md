@@ -1,6 +1,6 @@
 # Direct Line Bot Connector
 
-A Python-based connector for interacting with Azure Bot Service through the Direct Line API, featuring OAuth authentication support and response handling.
+A Python-based connector for interacting with Azure Co-Pilot Agent through the Direct Line API, featuring OAuth authentication support and response handling.
 
 ## Features
 - Direct Line token generation
