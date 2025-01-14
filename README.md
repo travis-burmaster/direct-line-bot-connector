@@ -48,7 +48,7 @@ USER_TOKEN=your_oauth_user_token
 1. Activate your virtual environment (if not already activated)
 2. Run the script:
 ```bash
-python bot_connector.py
+python agent_connector.py
 ```
 
 The script will:
