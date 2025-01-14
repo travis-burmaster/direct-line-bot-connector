@@ -41,7 +41,28 @@ Create a `.env` file in the project root with your credentials:
 DIRECT_LINE_SECRET=your_direct_line_secret_from_azure_portal
 BotIdentifier=your_bot_id
 USER_TOKEN=your_oauth_user_token
+AppClientId=your_azure_ad_app_client_id
+TenantId=your_azure_ad_tenant_id
 ```
+
+### 4. Token Generation Utility (get_token.py)
+The project includes a Streamlit-based utility for generating OAuth tokens:
+
+```bash
+streamlit run get_token.py
+```
+
+This utility will:
+- Provide a login button that redirects to Microsoft's authentication page
+- Allow you to paste the redirect URL after successful login
+- Generate and display your access token
+- Handle the complete OAuth2 flow using MSAL (Microsoft Authentication Library)
+
+Key features of get_token.py:
+- Streamlit-based user interface
+- MSAL integration for secure authentication
+- Automatic token acquisition and display
+- Support for custom tenant and client configurations
 
 ## Usage
 
@@ -84,3 +105,4 @@ Common issues:
 1. Token generation fails: Check your DIRECT_LINE_SECRET
 2. Authentication errors: Verify USER_TOKEN is valid
 3. Timeout errors: Check network connection and bot response time
+4. OAuth errors: Ensure AppClientId and TenantId are correctly configured in .env file
