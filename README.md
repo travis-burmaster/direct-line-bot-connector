@@ -1,6 +1,7 @@
-# Direct Line Bot Connector
+# Direct Line Azure Co-Pilot Agent API 
 
 A Python-based connector for interacting with Azure Co-Pilot Agent through the Direct Line API, featuring OAuth authentication support and response handling.
+This connector can be integrated with AutoGen or Langgraph.
 
 ## Features
 - Direct Line token generation
